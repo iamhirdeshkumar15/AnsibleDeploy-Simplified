@@ -1,0 +1,5 @@
+---
+- import_playbook: install_nginx.yml
+- import_playbook: safe_git_directory.yml
+- import_playbook: clone_repository.yml
+- import_playbook: set_permissions.yml
