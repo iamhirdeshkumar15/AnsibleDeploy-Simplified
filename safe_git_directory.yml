@@ -1,0 +1,7 @@
+---
+- name: Mark /var/www/html/portfolio as a safe Git directory
+  hosts: hosts
+  become: yes
+  tasks:
+    - name: Add /var/www/html/portfolio to Git safe directories
+      command: git config --global --add safe.directory /var/www/html/portfolio
