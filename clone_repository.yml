@@ -1,0 +1,11 @@
+---
+- name: Clone portfolio repository
+  hosts: hosts
+  become: yes
+  tasks:
+    - name: Clone portfolio repository
+      git:
+        repo: 'https://github.com/iamhirdeshkumar15/Portfolio.git'
+        dest: /var/www/html/portfolio
+        version: main
+        update: yes
