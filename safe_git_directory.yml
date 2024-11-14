@@ -1,0 +1,12 @@
+---
+- name: Set directory permissions for portfolio
+  hosts: hosts
+  become: yes
+  tasks:
+    - name: Ensure permissions are correct
+      file:
+        path: /var/www/html/portfolio
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
